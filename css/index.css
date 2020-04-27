@@ -13,6 +13,7 @@ section {
 
 #home {
 	background-color: var(--black-leather-jacket);
+	height: calc(var(--element-height) * 1px);
 	text-align: center;
 }
 
