@@ -1,0 +1,28 @@
+@import './variables.css';
+/********
+DEFAULT MOBILE STYLING
+********/
+
+body {
+	margin: 0px;
+}
+
+section {
+	padding: 20px;
+}
+
+#home {
+	background-color: var(--black-leather-jacket);
+	text-align: center;
+}
+
+.social-media-icons {
+	width: 15px;
+	height: 15px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.social-media-icons-link {
+	text-decoration-line: none;
+}
