@@ -1,4 +1,20 @@
 @import './variables.css';
+
+@font-face {
+	font-family: Hello;
+	src: local('Hello.otf');
+}
+
+@font-face {
+	font-family: Provicali;
+	src: local('Provicali.otf');
+}
+
+@font-face {
+	font-family: Raleway;
+	src: url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+}
+
 /********
 DEFAULT MOBILE STYLING
 ********/
@@ -7,19 +23,42 @@ body {
 	margin: 0px;
 }
 
-section {
-	padding: 20px;
+#hello {
+	font-family: 'Hello';
+	font-size: 60px;
+	color: var(--wheat);
+	margin: 0px;
 }
 
 #home {
 	background-color: var(--black-leather-jacket);
 	height: calc(var(--element-height) * 1px);
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.icons-wrapper {
+	padding-top: 25px;
+}
+
+#intro {
+	color: var(--ivory);
+	font-family: 'Provicali';
+	font-size: 23px;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+section {
+	padding: 20px;
 }
 
 .social-media-icons {
-	width: 15px;
-	height: 15px;
+	width: 20px;
+	height: 20px;
 	margin-left: 8px;
 	margin-right: 8px;
 }
