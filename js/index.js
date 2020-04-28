@@ -3,8 +3,11 @@
 const height = window.innerHeight;
 const width = window.innerWidth;
 
-const divider = document.querySelectorAll('.divider');
-const home = document.querySelector('#home');
+const dividers = document.querySelectorAll('.divider');
+const sections = document.querySelectorAll('section');
 
-divider.forEach(item => item.style.setProperty('--element-width', width));
-home.style.setProperty('--element-height', height);
+dividers.forEach(divider => divider.style.setProperty('--divider-width', width));
+sections.forEach(section => {
+  section.style.setProperty('--section-height', height);
+  section.style.setProperty('--section-width', width);
+});
