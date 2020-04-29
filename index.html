@@ -4,44 +4,44 @@
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>Alisha Evans Dev Portfolio</title>
+	<title>Alisha Evans Dev Portfolio</title>
 	<link href='css/index.css' rel='stylesheet' type='text/css'>
 	<link href='css/projects.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-  <header>
+	<header>
 
-  </header>
+	</header>
 	<main class='container'>
-    <section id='home'>
+		<section id='home'>
 			<h1 id='hello'>hello</h1>
 			<p id='intro'>my name is alisha,</p>
 			<p id='intro'>thanks for stopping by.</p>
 			<article class='icons-wrapper'>
-        <a class='social-media-icons-link' href='http://linkedin.com/in/alishaevans/' rel='noopener noreferrer'
-          target='_blank'>
+				<a class='social-media-icons-link' href='http://linkedin.com/in/alishaevans/' rel='noopener noreferrer'
+					target='_blank'>
 					<img class='social-media-icons' src='./assets/social/linkedin.svg' alt='LinkedIn logo'>
-        </a>
-        <a class='social-media-icons-link' href='https://github.com/alishaevn' rel='noopener noreferrer'
-          target='_blank'>
+				</a>
+				<a class='social-media-icons-link' href='https://github.com/alishaevn' rel='noopener noreferrer'
+					target='_blank'>
 					<img class='social-media-icons' src='./assets/social/github.svg' alt='Github logo'>
-        </a>
+				</a>
 				<a class='social-media-icons-link' href='https://www.instagram.com/thatgirlt0nii/'
 					rel='noopener noreferrer' target='_blank'>
 					<img class='social-media-icons' src='./assets/social/instagram.svg' alt='Instagram logo'>
-        </a>
-        <a class='social-media-icons-link' href='https://twitter.com/thatgirlt0nii' rel='noopener noreferrer'
-          target='_blank'>
+				</a>
+				<a class='social-media-icons-link' href='https://twitter.com/thatgirlt0nii' rel='noopener noreferrer'
+					target='_blank'>
 					<img class='social-media-icons' src='./assets/social/twitter.svg' alt='Twitter logo'>
-        </a>
+				</a>
 				<a class='social-media-icons-link' href='mailto:alishaevn2@gmail.com' rel='noopener noreferrer'
 					target='_blank'>
 					<img class='social-media-icons' src='./assets/social/mail.svg' alt='Email'>
-        </a>
-      </article>
-    </section>
-    <section id='about'>
+				</a>
+			</article>
+		</section>
+		<section id='about'>
 			<img class='' src=''>
 			<header>
 				<div class='divider' id='left'></div>
@@ -78,27 +78,37 @@
 					shooting scenic photography.
 				</li>
 			</ol>
-    </section>
-    <section id='projects'>
+		</section>
+		<section id='projects'>
 			<header>
 				<div class='divider' id='right'></div>
 				<span class='section-title'>Recent Projects</span>
 			</header>
 			<div class='blackout'></div>
-			<img class='project-button' src='./assets/projects/vizer_mock.png' alt='Vizer mobile app'
+			<img class='project-button' src='./assets/projects/vizer.png' alt='Vizer mobile app'
 				data-project-button='vizer'>
-			<div class='popup-modal' data-project-modal='vizer'>
-				<i class='popup-modal__close'></i>
-				<h1>
-					Modal One Title
-				</h1>
-			</div>
+			<aside class='popup-modal vizer' data-project-modal='vizer'>
+				<div class='popup-modal__close'>X</div>
+				<img class='modal-mock-up' src='./assets/projects/vizer_mock.png' alt='Vizer mobile app'>
+				<div class='app-details'>
+					<img class='modal-logo' src='./assets/projects/vizer-logo.png' alt='Vizer mobile app'>
+					<h2 class='app-name'>Vizer</h2>
+				</div>
+				<p class='app-blurb'>
+					Vizer is an app rewarding exercise to build healthier and stronger communities. Reach your daily
+					activity goals to activate meal donations to the Food Bank and redeem personal rewards from local
+					businesses.
+				</p>
+				<div class='store-icons-wrapper'>
+					<img class='store-icons' src='./assets/projects/app-store.svg' alt='iOS Play Store'>
+					<img class='store-icons' src='./assets/projects/play-store.svg' alt='Android Play Store'>
+				</div>
+			</aside>
+		</section>
+	</main>
+	<footer id='footer'>
 
-    </section>
-  </main>
-  <footer id='footer'>
-
-  </footer>
+	</footer>
 </body>
 <script src='js/index.js'></script>
 <script src='js/projects.js'></script>
