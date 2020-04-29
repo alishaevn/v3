@@ -1,23 +1,13 @@
 @import './variables.css';
 
-@font-face {
-	font-family: Hello;
-	src: local('Hello.otf');
-}
-
-@font-face {
-	font-family: Provicali;
-	src: local('Provicali.otf');
-}
-
-@font-face {
-	font-family: Raleway;
-	src: url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-}
-
 /********
 DEFAULT MOBILE STYLING
 ********/
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -25,10 +15,6 @@ html {
 #about,
 #projects {
 	background-color: var(--ivory);
-}
-
-body {
-	margin: 0px;
 }
 
 .divider {
@@ -42,10 +28,9 @@ header {
 }
 
 #hello {
-	font-family: 'Hello';
+	font-family: var(--Hello);
 	font-size: 60px;
 	color: var(--wheat);
-	margin: 0px;
 }
 
 #home {
@@ -63,7 +48,7 @@ header {
 
 #intro {
 	color: var(--ivory);
-	font-family: 'Provicali';
+	font-family: var(--Provicali);
 	font-size: 23px;
 	letter-spacing: 1px;
 	margin-bottom: 5px;
@@ -115,7 +100,7 @@ section {
 }
 
 .section-title {
-	font-family: 'Provicali';
+	font-family: var(--Provicali);
 	font-size: 20px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -139,5 +124,5 @@ section {
 
 .text {
 	color: var(--black-leather-jacket);
-	font-family: 'Raleway';
+	font-family: var(--Raleway);
 }
