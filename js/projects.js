@@ -1,5 +1,6 @@
 'use strict';
 
+const body = document.querySelector('body');
 const modalOpenTriggers = document.querySelectorAll('.project-button');
 const bodyBlackout = document.querySelector('.blackout');
 
@@ -9,11 +10,13 @@ modalOpenTriggers.forEach(trigger => {
 		const popupModal = document.querySelector(`[data-project-modal='${projectButton}']`);
 
     	popupModal.classList.add('is--visible');
-    	bodyBlackout.classList.add('is-blacked-out');
+		body.classList.add('hidden');
+    
+		popupModal.scrollIntoView();
     
     	popupModal.querySelector('.popup-modal__close').addEventListener('click', () => {
     		popupModal.classList.remove('is--visible');
-    		bodyBlackout.classList.remove('is-blacked-out');
+			body.classList.remove('hidden');
     	});
     
     	bodyBlackout.addEventListener('click', () => {

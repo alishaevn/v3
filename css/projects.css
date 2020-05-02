@@ -11,6 +11,10 @@ a {
   color: inherit;
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 .app-blurb {
   font-family: var(--Raleway);
   font-size: 14px;
@@ -30,8 +34,11 @@ a {
   font-size: 30px;
   font-family: var(--Provicali);
   letter-spacing: 1px;
-  color: var(--vizerCoral);
   margin-left: 10px;
+}
+
+#app-name {
+  color: var(--vizerCoral);
 }
 
 .blackout {
@@ -50,12 +57,12 @@ a {
 }
 
 .modal-mock-up {
-  /* width: 100%; */
+  background-size: cover;
+  background-repeat: no-repeat;
   width: var(--section-width);
-  height: 175px;
-  object-fit: cover;
-  transform: scale(1.5);
-  margin: 50px auto;
+  height: calc(var(--section-height) * 0.45px);
+  margin-top: 25px;
+}
 }
 
 .popup-modal {
@@ -77,11 +84,9 @@ a {
 }
 
 .popup-modal__close {
-  /* position: absolute;
-  font-size: 1.2rem;
-  right: -10px;
-  top: -10px;
-  cursor: pointer; */
+  float: right;
+  font-family: var(--Provicali);
+  font-size: 20px;
 }
 
 .project-button {
@@ -104,6 +109,10 @@ a {
 
 .vizer {
   background-color: var(--vizerPink);
+}
+
+#vizer {
+  background-image: url(../assets/projects/vizer-modal.png);
 }
 
 
