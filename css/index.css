@@ -126,3 +126,7 @@ section {
 	color: var(--black-leather-jacket);
 	font-family: var(--Raleway);
 }
+
+.white {
+	color: var(--white);
+}
