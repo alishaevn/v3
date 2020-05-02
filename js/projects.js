@@ -19,7 +19,6 @@ modalOpenTriggers.forEach(trigger => {
 		let image
 		let name
 		let color
-		console.log('project button::', projectButton)
 
 		switch(projectButton) {
 		case 'vizer':
@@ -31,6 +30,11 @@ modalOpenTriggers.forEach(trigger => {
 			image = 'url(assets/projects/moishe-modal.png)'
 			name = 'var(--white)'
 			color = 'var(--moisheBlue)'
+			break
+		case 'scimo':
+			image = 'url(assets/projects/scimo-modal.png)'
+			name = 'var(--scimoTeal)'
+			color = 'var(--scimoSilver)'
 			break
 		}
 
