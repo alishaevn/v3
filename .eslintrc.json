@@ -5,10 +5,11 @@
 		"ecmaVersion": 2015
 	},
 	"rules": {
-		// enable additional rules
-		"indent": ["error", 4],
+		"indent": ["error", "tab"],
 		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "single"],
-		"semi": ["error", "never"]
+		"semi": ["error", "never"],
+		"no-console": "off",
+		"no-inline-comments": "off"
 	}
 }
