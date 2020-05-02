@@ -100,10 +100,27 @@ body.hidden {
 .store-icons-wrapper {
   justify-content: center;
   display: flex;
+  bottom: 40px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .svg-white {
   filter: invert(100%) sepia(0%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+.website {
+  padding: 8px 30px;
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-family: var(--Provicali);
 }
 
 .white {

@@ -36,6 +36,9 @@ modalOpenTriggers.forEach(trigger => {
 			name = 'var(--scimoTeal)'
 			color = 'var(--scimoSilver)'
 			break
+		case 'safer':
+			image = 'url(assets/projects/safer-modal.png)'
+			color = 'var(--saferGreen)'
 		}
 
 		modalBgImage.style['background-image'] = image
