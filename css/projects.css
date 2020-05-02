@@ -37,7 +37,7 @@ body.hidden {
   margin-left: 10px;
 }
 
-#app-name {
+#app-name-color-vizer {
   color: var(--vizerCoral);
 }
 
@@ -111,7 +111,7 @@ body.hidden {
   background-color: var(--vizerPink);
 }
 
-#vizer {
+#mock-vizer {
   background-image: url(../assets/projects/vizer-modal.png);
 }
 
