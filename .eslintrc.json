@@ -1,0 +1,14 @@
+{
+	"root": true,
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2015
+	},
+	"rules": {
+		// enable additional rules
+		"indent": ["error", 4],
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "never"]
+	}
+}
