@@ -8,28 +8,35 @@ modalOpenTriggers.forEach(trigger => {
 	trigger.addEventListener('click', () => {
 		const { projectButton } = trigger.dataset
 		const popupModal = document.querySelector(`[data-project-modal='${projectButton}']`)
-		const modalBgImage = document.getElementById('modal-mock-up')
-		const appName = document.getElementById('app-name')
-		const modal = document.getElementById('popup-modal')
+
+		const modalBgImages = document.getElementsByClassName('modal-mock-up')
+		const modalBgImage = [...modalBgImages].find(image => image.classList.contains(`${projectButton}`))
+		const appNames = document.getElementsByClassName('app-name')
+		const appName = [...appNames].find(name => name.classList.contains(`${projectButton}`))
+		const modalBgColors = document.getElementsByClassName('popup-modal')
+		const modalBgColor = [...modalBgColors].find(color => color.classList.contains(`${projectButton}`))
 
 		let image
-		let title
-		let bg
+		let name
+		let color
+		console.log('project button::', projectButton)
 
 		switch(projectButton) {
 		case 'vizer':
 			image = 'url(assets/projects/vizer-modal.png)'
-			title = 'var(--vizerCoral)'
-			bg = 'var(--vizerPink)'
+			name = 'var(--vizerCoral)'
+			color = 'var(--vizerPink)'
 			break
 		case 'moishe':
 			image = 'url(assets/projects/moishe-modal.png)'
+			name = 'var(--white)'
+			color = 'var(--moisheBlue)'
 			break
 		}
 
 		modalBgImage.style['background-image'] = image
-		appName.style.color = title
-		modal.style['background-color'] = bg
+		appName.style.color = name
+		modalBgColor.style['background-color'] = color
 
 		
 		popupModal.classList.add('is--visible')
