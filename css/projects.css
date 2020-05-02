@@ -30,15 +30,12 @@ body.hidden {
   justify-content: center;
 }
 
-.app-name {
+#app-name {
   font-size: 30px;
   font-family: var(--Provicali);
+  font-weight: 100;
   letter-spacing: 1px;
   margin-left: 10px;
-}
-
-#app-name-color-vizer {
-  color: var(--vizerCoral);
 }
 
 .blackout {
@@ -56,7 +53,7 @@ body.hidden {
   width: 50px;
 }
 
-.modal-mock-up {
+#modal-mock-up {
   background-size: cover;
   background-repeat: no-repeat;
   width: var(--section-width);

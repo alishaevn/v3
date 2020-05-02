@@ -1,9 +1,4 @@
-/* eslint-disable indent */
 'use strict'
-
-const blackout = document.querySelector('.blackout');
-const body = document.querySelector('body');
-const modalOpenTriggers = document.querySelectorAll('.project-button');
 
 const blackout = document.querySelector('.blackout')
 const body = document.querySelector('body')
@@ -13,8 +8,28 @@ modalOpenTriggers.forEach(trigger => {
 	trigger.addEventListener('click', () => {
 		const { projectButton } = trigger.dataset
 		const popupModal = document.querySelector(`[data-project-modal='${projectButton}']`)
-		const { projectButton } = trigger.dataset;
-		const popupModal = document.querySelector(`[data-project-modal='${projectButton}']`);
+		const modalBgImage = document.getElementById('modal-mock-up')
+		const appName = document.getElementById('app-name')
+		const modal = document.getElementById('popup-modal')
+
+		let image
+		let title
+		let bg
+
+		switch(projectButton) {
+		case 'vizer':
+			image = 'url(assets/projects/vizer-modal.png)'
+			title = 'var(--vizerCoral)'
+			bg = 'var(--vizerPink)'
+			break
+		case 'moishe':
+			image = 'url(assets/projects/moishe-modal.png)'
+			break
+		}
+
+		modalBgImage.style['background-image'] = image
+		appName.style.color = title
+		modal.style['background-color'] = bg
 
 		
 		popupModal.classList.add('is--visible')
