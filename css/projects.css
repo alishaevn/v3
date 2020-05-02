@@ -80,7 +80,7 @@ body.hidden {
 
 .popup-modal.is--visible {
   pointer-events: auto;
-  display: initial
+  display: initial;
 }
 
 .popup-modal__close {
