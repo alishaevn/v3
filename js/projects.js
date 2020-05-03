@@ -26,7 +26,6 @@ const setModalStyle = project => {
 	const appName = [...appNames].find(name => name.classList.contains(`${project}`))
 	const modalBgColors = document.getElementsByClassName('popup-modal')
 	const modalBgColor = [...modalBgColors].find(color => color.classList.contains(`${project}`))
-		const modalBgColor = [...modalBgColors].find(color => color.classList.contains(`${projectButton}`))
 
 	let image
 	let name
