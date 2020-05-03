@@ -9,18 +9,30 @@ modalOpenTriggers.forEach(trigger => {
 		const { projectButton } = trigger.dataset
 		const popupModal = document.querySelector(`[data-project-modal='${projectButton}']`)
 
-		const modalBgImages = document.getElementsByClassName('modal-mock-up')
-		const modalBgImage = [...modalBgImages].find(image => image.classList.contains(`${projectButton}`))
-		const appNames = document.getElementsByClassName('app-name')
-		const appName = [...appNames].find(name => name.classList.contains(`${projectButton}`))
-		const modalBgColors = document.getElementsByClassName('popup-modal')
+		setModalStyle(projectButton)
+		addClasses(popupModal)
+		
+		popupModal.scrollIntoView()
+    
+		popupModal.querySelector('.popup-modal__close').addEventListener('click', () => removeClasses(popupModal))
+		blackout.addEventListener('click', () => removeClasses(popupModal))
+	})
+})
+
+const setModalStyle = project => {
+	const modalBgImages = document.getElementsByClassName('modal-mock-up')
+	const modalBgImage = [...modalBgImages].find(image => image.classList.contains(`${project}`))
+	const appNames = document.getElementsByClassName('app-name')
+	const appName = [...appNames].find(name => name.classList.contains(`${project}`))
+	const modalBgColors = document.getElementsByClassName('popup-modal')
+	const modalBgColor = [...modalBgColors].find(color => color.classList.contains(`${project}`))
 		const modalBgColor = [...modalBgColors].find(color => color.classList.contains(`${projectButton}`))
 
-		let image
-		let name
-		let color
+	let image
+	let name
+	let color
 
-		switch(projectButton) {
+	switch(project) {
 		case 'vizer':
 			image = 'url(assets/projects/vizer-modal.png)'
 			name = 'var(--vizerCoral)'
@@ -39,30 +51,22 @@ modalOpenTriggers.forEach(trigger => {
 		case 'safer':
 			image = 'url(assets/projects/safer-modal.png)'
 			color = 'var(--saferGreen)'
-		}
+	}
 
-		modalBgImage.style['background-image'] = image
-		appName.style.color = name
-		modalBgColor.style['background-color'] = color
+	modalBgImage.style['background-image'] = image
+	appName.style.color = name
+	modalBgColor.style['background-color'] = color
+}
 
-		
-		popupModal.classList.add('is--visible')
-		blackout.classList.add('is-blacked-out')
-		body.classList.add('hidden')
-		
-		popupModal.scrollIntoView()
-    
-		popupModal.querySelector('.popup-modal__close').addEventListener('click', () => {
-			popupModal.classList.remove('is--visible')
-			blackout.classList.remove('is-blacked-out')
-			body.classList.remove('hidden')
-			
-		})
-    
-		blackout.addEventListener('click', () => {
-			popupModal.classList.remove('is--visible')
-			blackout.classList.remove('is-blacked-out')
-			body.classList.remove('hidden')
-		})
-	})
-})
+
+const addClasses = modal => {
+	modal.classList.add('is--visible')
+	blackout.classList.add('is-blacked-out')
+	body.classList.add('hidden')
+}
+
+const removeClasses = modal => {
+	modal.classList.remove('is--visible')
+	blackout.classList.remove('is-blacked-out')
+	body.classList.remove('hidden')
+}
